@@ -47,7 +47,7 @@ if __name__ == '__main__':
     while True:
         print('digite 0 para sair ')
         print('digite 3 para zera conta\ndigite 4 para zera conta 2')
-        opçao = int(input('digite a conta a qual sera feita a transferencia 1 ou 2 : '))
+        opcao = int(input('digite a conta a qual sera feita a transferencia 1 ou 2 : '))
         if opcao == 0 :
             break
         if opcao == 1:
