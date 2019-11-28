@@ -1,6 +1,6 @@
 import threading as _
 import time
-import _thread as a
+import thread as a
 class banco():
     def __init__(self,saldo=0):
         self.saldo=saldo
@@ -59,10 +59,10 @@ if __name__ == '__main__':
                 thread_list.append(thread)
                 thread.start()
                 time.sleep(0.2)
-                c=int(input('deseja continua a operacao?(1 para sim /npara nao ) '))
                 if numero>conta1.saldo:
                     exit('error \nsaldo insuficiente ')
-                if c != 1:
+                c=int(input('deseja cuntinuar? (1para continuar)'))
+	        if c != 1:
                     break
         if opcao == 2:
             while True:
@@ -72,11 +72,11 @@ if __name__ == '__main__':
                 thread = _.Thread(target=conta2.transferencia2, args=(conta1, numero, lock))
                 thread_list.append(thread)
                 thread.start()
-                time.sleep(0.2)
-                c = int(input('deseja continua a operacao?(1 para sim /n2para nao ) '))
+              	time.sleep(0.2)
                 if numero > conta2.saldo:
                     exit('error \nsaldo insuficiente ')
-                if c != 1:
+		c=int(input('deseja continuar?( 1 para continuar)'))                
+	        if c != 1:
                     break
         if opcao == 3:
             while True:
